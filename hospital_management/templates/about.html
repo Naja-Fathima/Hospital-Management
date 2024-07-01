@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block title%}
+About
+{% endblock %}
+
+
+{% block content %}
+
+{% load static %}
+        <style>
+            *{
+                margin:0px;
+                padding:0px;
+                box-sizing: border-box;
+            }
+            .about-us{
+                min-height: 100vh;
+                padding: 80px 0px;
+                background-color: #39648f;
+            }
+            .container{
+                max-width: 1200px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 30px;
+                border-radius: 10px;
+                margin: 0px auto;
+            }
+            .about-image{
+                width: 50%;
+                overflow: hidden;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            }
+            .about-image img{
+                display: block;
+                width: 100%;
+                height: auto;
+                transition: transform 0.3s ease;
+            }
+            .about-image:hover img{
+                transform: scale(1.1);
+            }
+            .about-content{
+                width: 50%;
+                margin-left: 40px;
+            }
+            .about-content h2{
+                color: #fff;
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+            .about-content p{
+                color: #c7d5e0;
+                font-size: 17px;
+                line-height: 1.6;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="about-us">
+            <div class="container">
+                <div class="about-image">
+                    <img src="/static/images/hos_photo.webp">
+                </div>
+                <div class="about-content">
+                    <h2>About Us</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                </div>
+            </div>
+        </section>
+        {% endblock %}
+    </body>

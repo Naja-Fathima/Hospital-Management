@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% block title%}
+Contact Us
+{% endblock %}
+
+
+{% block content %}
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+            body{
+                background-color: #39648f;
+            }
+            .container{
+                width: 80%;
+                margin: 60px auto;
+                display:flex;
+                justify-content: center;
+            }
+            .contact, .content{
+                width:10;
+                padding:25px;
+            }
+            .contact h1{
+                font-size: 35px;
+                margin-bottom: 30px;
+                color: #2c1c5c;
+            }
+            .content h1{
+                font-size: 35px;
+                margin-bottom: 15px;
+                color: #2c1c5c;
+            }
+            .content h2{
+                margin-top: 20px;
+                margin-bottom: 10px;
+                color: #2c1c5c;
+            }
+            .content p{
+                color: #fff;
+                font-size: 17px;
+                line-height: 1.4;
+            }
+            label{
+                color: #fff;
+                font-size: 17px;
+                display: block;
+                margin-top: 12px;
+                margin-bottom: 5px;
+            }
+            input, textarea{
+                width:100%;
+                padding: 12px;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+            }
+            .btn{
+                font-size: 17px;
+                background-color: #09143d;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                padding: 10px 20px;
+                cursor: pointer;
+                margin-top: 15px;
+                transition: 0.3s ease;
+            }
+            .btn:hover{
+                background-color: #102366;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="contact">
+                <h1>
+                   Contact Us
+                </h1>
+                <form action="">
+                    <label for="name">Your Name</label>
+                    <input type="text" name="name" required>
+                    <label for="email">Your Email</label>
+                    <input type="email" name="email" required>
+                    <label for="message">Message</label>
+                    <textarea name="message" required></textarea>
+                    <button class="btn" type="submit">Send</button>
+                </form>
+            </div>
+            <div class="content">
+                <h1>City Hospital</h1>
+                <p>If you have any questions or need assitance, please don't
+                    hesitate to contact us using the information provided. We're here to help you!
+                </p>
+                <h2>Contact Information</h2>
+                <p><strong>Email:</strong> cityhospital@example.com</p>
+                <p><strong>Phone:</strong> (123) 456-789</p>
+                <p><strong>Address:</strong> Main Street, City, Country</p>
+            </div>
+        </div>
+    </body>
+    {% endblock %}
